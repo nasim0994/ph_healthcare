@@ -1,7 +1,14 @@
+import { UserRole } from '@prisma/client';
+
 export type IUser = {
+  id: string;
   name: string;
   email: string;
   password: string;
-  role: 'admin' | 'user';
-  isBlocked: boolean;
+  needPasswordChange: boolean;
+  phone: string;
+  role: UserRole;
+  status: string;
+  isDeleted: boolean;
+  profilePhoto: string;
 };
